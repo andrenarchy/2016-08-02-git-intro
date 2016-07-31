@@ -1,0 +1,47 @@
+doctype html
+
+mixin slide(title, subtitle)
+  slide.container-fluid
+    .row
+      .col-md-12
+        .box.text-center
+          h1= title
+          h2= subtitle
+    .row.sm-margin-top
+      block
+
+html(ng-app="GitIntro",lang="en")
+  head
+    title git introduction
+    meta(charset="UTF-8")
+    link(rel="stylesheet",href="vendor/bootstrap/dist/css/bootstrap.min.css")
+    link(rel="stylesheet",href="vendor/fontawesome/css/font-awesome.min.css")
+    link(rel="stylesheet",href="//fonts.googleapis.com/css?family=Roboto:400,500,600,800")
+
+    script(src="vendor/angular/angular.min.js")
+    script(src="vendor/angular-animate/angular-animate.min.js")
+    script(src="vendor/angular-slidedeck/angular-slidedeck.min.js")
+    link(rel="stylesheet",href="vendor/angular-slidedeck/angular-slidedeck.min.css")
+
+    script(src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js")
+    script(src="vendor/angular-highlightjs/angular-highlightjs.min.js")
+    link(rel="stylesheet",href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/tomorrow-night.min.css")
+
+    // initialize angular (your own js and css)
+    script(src="index.js")
+    link(rel="stylesheet",href="index.css")
+
+  body(ng-cloak)
+    slides
+      +slide('git introduction', 'Collaborative coding with pull requests')
+        .col-md-6.col-md-offset-3.box.text-center
+          img(src="img/andre.jpg",style="max-width: 90px").img-circle
+          p André Gaul
+          p
+            a(href="https://twitter.com/andrenarchy") @andrenarchy
+          p
+            a(href="https://paperhive.org")
+              img(src="img/paperhive.svg",style="height: 1em")
+
+      +slide('git introduction', 'Collaborative coding with pull requests')
+        p Haha!

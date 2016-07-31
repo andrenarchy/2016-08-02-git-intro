@@ -1,0 +1,36 @@
+{
+  "name": "2016-08-02-git-intro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "node-sass -o build src/index.scss",
+    "build:html": "pug -P -o build src/index.pug",
+    "build:js": "cp src/index.js build/index.js",
+    "build:static": "gulp static vendor",
+    "build": "npm-run-all -s build:*",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:css": "npm run build:css && node-sass -w -o build src/index.scss",
+    "watch:html": "pug -w -P -o build src/index.pug",
+    "watch:js": "nodemon -w src/index.js -x npm run build:js",
+    "watch:serve": "live-server build",
+    "watch": "npm-run-all -p build:static watch:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrenarchy/2016-08-02-git-intro.git"
+  },
+  "author": "André Gaul <andre@gaul.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andrenarchy/2016-08-02-git-intro/issues"
+  },
+  "homepage": "https://github.com/andrenarchy/2016-08-02-git-intro#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "live-server": "^1.0.0",
+    "nodemon": "^1.10.0",
+    "npm-run-all": "^2.3.0",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}
