@@ -2,12 +2,20 @@ doctype html
 
 mixin slide(title, subtitle)
   slide.container-fluid
-    .row
-      .col-md-12
-        .box.text-center
-          h1= title
-          h2= subtitle
+    if title || subtitle
+      .row
+        .col-md-12
+          .box.text-center
+            if title
+              h1= title
+            if subtitle
+              h2= subtitle
     .row.sm-margin-top
+      block
+
+mixin slide-column(classes=['col-md-12'])
+  div(class=classes)
+    .box
       block
 
 html(ng-app="GitIntro",lang="en")
@@ -33,15 +41,20 @@ html(ng-app="GitIntro",lang="en")
 
   body(ng-cloak)
     slides
-      +slide('git introduction', 'Collaborative coding with pull requests')
-        .col-md-6.col-md-offset-3.box.text-center
-          img(src="img/andre.jpg",style="max-width: 90px").img-circle
-          p André Gaul
-          p
-            a(href="https://twitter.com/andrenarchy") @andrenarchy
-          p
-            a(href="https://paperhive.org")
-              img(src="img/paperhive.svg",style="height: 1em")
 
       +slide('git introduction', 'Collaborative coding with pull requests')
-        p Haha!
+        +slide-column(['col-md-offset-3', 'col-md-6'])
+          .text-center
+            img(src="img/andre.jpg",style="max-width: 90px").img-circle
+            p André Gaul
+            p
+              a(href="https://twitter.com/andrenarchy") @andrenarchy
+            p
+              a(href="https://paperhive.org")
+                img(src="img/paperhive.svg",style="height: 1em")
+
+      each name in ['new-project', 'code', 'hack', 'code-files', 'months', 'enter-bob', 'mail', 'mess']
+        +slide('The problem')
+          +slide-column
+            .text-center
+              img(src='img/problem-' + name +'.svg',style="width: 80%")

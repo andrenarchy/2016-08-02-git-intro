@@ -14,7 +14,8 @@
     "watch:html": "pug -w -P -o build src/index.pug",
     "watch:js": "nodemon -w src/index.js -x npm run build:js",
     "watch:serve": "live-server build",
-    "watch": "npm-run-all -p build:static watch:*"
+    "watch:static": "nodemon -w src/img -e jpg,svg -x npm run build:static",
+    "watch": "npm-run-all -p watch:*"
   },
   "repository": {
     "type": "git",
