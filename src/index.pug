@@ -58,3 +58,15 @@ html(ng-app="GitIntro",lang="en")
           +slide-column
             .text-center
               img(src='img/problem-' + name +'.svg',style="width: 80%")
+
+      +slide('Why git?')
+        +slide-column
+          ul
+            li keeps entire project history (<em>commits</em>)
+            li suitable for single dev and teams with &gt;1e4 devs
+            li allows devs to work <em>in parallel</em> seamlessly
+
+      +slide('git – the concept')
+        +slide-column
+          .text-center
+            img(src="img/git-concept.svg",style="width: 90%")
