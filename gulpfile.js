@@ -13,7 +13,6 @@ gulp.task('vendor', [], function() {
     'bower_components/roboto-fontface/**/*',
     'bower_components/angular/angular.min.js',
     'bower_components/angular-animate/angular-animate.min.js',
-    'bower_components/angular-highlightjs/angular-highlightjs.min.*',
     'bower_components/angular-slidedeck/angular-slidedeck.min.*',
   ], {base: './bower_components'})
     .pipe(gulp.dest('build/vendor'));
