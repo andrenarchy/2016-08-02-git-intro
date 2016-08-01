@@ -6,7 +6,7 @@
   "scripts": {
     "build:css": "node-sass -o build src/index.scss",
     "build:html": "pug -o build src/index.pug",
-    "build:js": "cp src/index.js build/index.js",
+    "build:js": "mkdir -p build && cp src/index.js build/index.js",
     "build:static": "gulp static vendor",
     "build": "npm-run-all -s build:*",
     "test": "echo \"Error: no test specified\" && exit 1",
