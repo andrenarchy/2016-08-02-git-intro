@@ -29,6 +29,7 @@
   "homepage": "https://github.com/andrenarchy/2016-08-02-git-intro#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "jstransformer-highlight": "^1.0.1",
     "live-server": "^1.0.0",
     "nodemon": "^1.10.0",
     "npm-run-all": "^2.3.0",
