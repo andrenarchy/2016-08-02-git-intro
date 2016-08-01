@@ -9,6 +9,9 @@ a:hover {
 .slide-background {
   background-color: black; }
 
+.tiny {
+  font-size: 70%; }
+
 code {
   background-color: #1d1f21;
   color: white; }
