@@ -42,7 +42,7 @@ html(ng-app="GitIntro",lang="en")
   body(ng-cloak)
     slides
 
-      +slide('git introduction', 'Collaborative coding with pull requests')
+      +slide('git', 'Introduction to collaborative coding')
         +slide-column(['col-md-offset-3', 'col-md-6'])
           .text-center
             img(src="img/andre.jpg",style="max-width: 90px").img-circle
@@ -59,14 +59,56 @@ html(ng-app="GitIntro",lang="en")
             .text-center
               img(src='img/problem-' + name +'.svg',style="width: 80%")
 
-      +slide('Why git?')
-        +slide-column
+      +slide('git')
+        +slide-column(['col-md-6'])
+          h3 Why?
           ul
-            li keeps entire project history (<em>commits</em>)
-            li suitable for single dev and teams with &gt;1e4 devs
-            li allows devs to work <em>in parallel</em> seamlessly
+            li keep entire project history
+            li fixed snapshots: <em>commits</em>
+            li for single devs
+            li for teams with thousands of devs
+            li work <em>in parallel</em>
+        +slide-column(['col-md-6'])
+          h3 How?
+          pre
+            code
+              | # initialize local repo
+              | git init
+              | # create file test.py
+              | echo "print('hello world')" > test.py
+              | # tell git to take care of test.py
+              | git add test.py
+              | # create a commit
+              | git commit -m "add test.py"
 
-      +slide('git – the concept')
+      +slide('git in time', 'commits and branches')
         +slide-column
           .text-center
-            img(src="img/git-concept.svg",style="width: 90%")
+            img(src="img/git-concept-commits.svg",style="width: 85%")
+
+      +slide('git in space', 'sync with others')
+        +slide-column(['col-md-6'])
+          h3 Setup
+          pre
+            code
+              | # tell git about the remote repo
+              | git remote add origin git@github.com/user/repo.git
+          pre
+            code
+              | # initial push
+              | git push -u origin master
+        +slide-column(['col-md-6'])
+          h3 Regular usage
+          pre
+            code
+              | # sync changes from remote repo
+              | git pull
+          pre
+            code
+              | # sync changes to remote repo
+              | git push
+
+      +slide('git in space')
+        +slide-column
+          .text-center
+            img(src="img/git-concept-path.svg",style="width: 90%")
