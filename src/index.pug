@@ -143,7 +143,7 @@ html(ng-app="GitIntro",lang="en")
                     git push
             li Create pull request for merging #[code feature-X] branch into #[code master] branch (e.g., via github)
 
-      +slide('git', 'good habits')
+      +slide('git', 'good habits 1/2')
         +slide-column(['col-md-6'])
           h3 Use feature branches
           ul
@@ -161,6 +161,23 @@ html(ng-app="GitIntro",lang="en")
                 code.hljs
                   :highlight(lang="bash")
                     git commit -m "use stable algorithm (fixes #42)"
+
+      +slide('git', 'good habits 1/2')
+        +slide-column(['col-md-6'])
+          h3 No binaries
+          ul
+            li git works best with text files
+            li do not commit (large or frequently changed) binary files<br>→ remember: they will be in the history forever!
+
+        +slide-column(['col-md-6'])
+          h3 Maintain a #[code .gitignore] file
+          p Keeps non-source files (compiled or temporary files) out of your repository. Example content:
+          pre
+            code.hljs
+              :highlight(lang="bash")
+                build
+                output
+                *.xml
 
       +slide('git', 'hands on')
         +slide-column
