@@ -7,7 +7,7 @@
     "build:css": "node-sass -o build src/index.scss",
     "build:html": "pug -o build src/index.pug",
     "build:js": "mkdir -p build && cp src/index.js build/index.js",
-    "build:static": "gulp static vendor",
+    "build:static": "gulp images vendor",
     "build": "npm-run-all -s build:*",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch:css": "npm run build:css && node-sass -w -o build src/index.scss",
@@ -29,6 +29,7 @@
   "homepage": "https://github.com/andrenarchy/2016-08-02-git-intro#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-imagemin": "^3.0.2",
     "jstransformer-highlight": "^1.0.1",
     "live-server": "^1.0.0",
     "nodemon": "^1.10.0",

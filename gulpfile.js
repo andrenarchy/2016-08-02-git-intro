@@ -1,9 +1,13 @@
 'use strict';
 
-var gulp = require('gulp');
+const gulp = require('gulp');
+const imagemin = require('gulp-imagemin');
 
-gulp.task('static', [], function() {
-  return gulp.src(['src/img/**/*'], {base: './src'}).pipe(gulp.dest('build'));
+gulp.task('images', [], function() {
+  return gulp
+    .src(['src/img/**/*'], {base: './src'})
+    .pipe(imagemin())
+    .pipe(gulp.dest('build'));
 });
 
 gulp.task('vendor', [], function() {
