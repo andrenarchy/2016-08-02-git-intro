@@ -34,5 +34,8 @@
     "nodemon": "^1.10.0",
     "npm-run-all": "^2.3.0",
     "pug-cli": "^1.0.0-alpha6"
+  },
+  "dependencies": {
+    "node-sass": "^3.8.0"
   }
 }
