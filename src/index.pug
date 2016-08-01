@@ -10,7 +10,7 @@ mixin slide(title, subtitle)
               h1= title
             if subtitle
               h2= subtitle
-    .row.sm-margin-top
+    .row.row-stretch.sm-margin-top
       block
 
 mixin slide-column(classes=['col-md-12'])
@@ -43,7 +43,8 @@ html(ng-app="GitIntro",lang="en")
       +slide('git', 'Introduction to collaborative coding')
         +slide-column(['col-md-offset-3', 'col-md-6'])
           .text-center
-            img(src="img/andre.jpg",style="max-width: 90px").img-circle
+            a(href="https://andre.gaul.io")
+              img(src="img/andre.jpg",style="max-width: 90px").img-circle
             p André Gaul
             p
               a(href="https://twitter.com/andrenarchy") @andrenarchy
@@ -92,11 +93,12 @@ html(ng-app="GitIntro",lang="en")
             code.hljs
               :highlight(lang="bash")
                 # tell git about the remote repo
-                git remote add origin git@github.com/user/repo.git
+                git remote add origin \
+                  git@github.com/user/repo.git
           pre
             code.hljs
               :highlight(lang="bash")
-                # initial push
+                # initial push with new remote
                 git push -u origin master
         +slide-column(['col-md-6'])
           h3 Regular usage

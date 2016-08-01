@@ -39,6 +39,13 @@ blockquote {
   background-color: #0e0e0e;
 }
 
+.row-stretch {
+  display: flex;
+  > div > .box {
+    height: 100%;
+  }
+}
+
 .box {
   background-color: rgba(70, 70, 70, 0.3);
   border-radius: 10px;
