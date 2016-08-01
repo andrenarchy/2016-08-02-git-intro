@@ -16,7 +16,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="problem-mess.svg">
+   sodipodi:docname="problem-explosion.svg">
   <defs
      id="defs4">
     <inkscape:path-effect
@@ -56,7 +56,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -485,7 +485,7 @@
      inkscape:groupmode="layer"
      id="layer12"
      inkscape:label="explosion"
-     style="display:none">
+     style="display:inline">
     <image
        style="display:inline"
        y="73.374985"
