@@ -119,11 +119,48 @@ html(ng-app="GitIntro",lang="en")
           .text-center
             img(src="img/git-concept-path.svg",style="width: 75%")
 
+      +slide('git', 'typical workflow')
+        +slide-column(['col-md-6'])
+          ul
+            li setup: create or clone repository
+            li
+              p get up to date and create a feature branch
+              pre
+                code.hljs
+                  :highlight(lang="bash")
+                    git checkout master
+                    git pull
+                    git checkout -b feature-X
+        +slide-column(['col-md-6'])
+          ul
+            li
+              p commit early, commit often!
+              pre
+                code.hljs
+                  :highlight(lang="bash")
+                    git add FILES
+                    git commit -m "MESSAGE"
+                    git push
+            li Create pull request from #[code feature-X] branch to #[code master] branch (on github, ...)
+
       +slide('git', 'hands on')
         +slide-column
           ol
             li Create a github account or log in
-            li Go to <a href="https://github.com/andrenarchy/pull-request-please">https://github.com/andrenarchy/pull-request-please</a>
+            li Go to #[a(href="https://github.com/andrenarchy/pull-request-please") https://github.com/andrenarchy/pull-request-please]
             li Create a fork
             li Clone your fork:<br><code>git clone https://github.com/YOURUSERNAME/pull-request-please</code>
             li Read <code>groupXX.txt</code>
+
+      +slide('git')
+        +slide-column
+          ul
+            li #[a(href="https://guides.github.com/activities/citable-code/") Give your repo a DOI] → citable code!
+            li git solutions
+              ul
+                li #[a(href="https://github.com") github] → hosted, hassle-free, many free software projects
+                li #[a(href="https://bitbucket.org") bitbucket] → hosted, more configuration options, free private repos for academics
+                li #[a(href="https://gitlab.com") gitlab] → self-hosted, free software, full control
+            li also works great for LaTeX!<br>→ Check out #[a(href="https://overleaf.com") Overleaf] and #[a(href="https://authorea.com") Authorea] for collaborative writing.
+
+      +slide('Questions?')
